@@ -28,15 +28,15 @@ position = Vector2(0, -1)
 scale = Vector2(0.201852, 0.2)
 sprite_frames = SubResource("SpriteFrames_w5ngi")
 
-[node name="SampleNpcCollisionShape" type="CollisionShape2D" parent="."]
+[node name="SampleNpcCollisionShape_npc" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yn4rk")
 
-[node name="SampleNpcArea2D" type="Area2D" parent="." groups=["npc_group"]]
+[node name="SampleNpcArea2D_npc" type="Area2D" parent="." groups=["npc_group"]]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SampleNpcArea2D"]
+[node name="CollisionShape2D_npc" type="CollisionShape2D" parent="SampleNpcArea2D_npc"]
 scale = Vector2(3.2389, 2.88246)
 shape = SubResource("CircleShape2D_k8n0l")
 debug_color = Color(0.933333, 0.101961, 0.588235, 0.419608)
 
-[connection signal="area_entered" from="SampleNpcArea2D" to="." method="_on_sample_npc_area_2d_area_entered"]
+[connection signal="area_entered" from="SampleNpcArea2D_npc" to="." method="_on_sample_npc_area_2d_area_entered"]
