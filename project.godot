@@ -22,7 +22,9 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline1": "res://dialogues/timeline1.dtl"
+}
 
 [display]
 

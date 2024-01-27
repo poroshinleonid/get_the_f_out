@@ -50,3 +50,16 @@ func player_movement(delta):
 	elif Input.is_action_just_released("down"):
 		sprite_2d.animation = "idle_down"
 	move_and_slide()
+
+
+func _on_player_collision_area_area_entered(area):
+	#%PressToTalkLabel.visible = true
+	var overl_bodies = area.get_overlapping_bodies()
+	var	overl_body
+	if overl_bodies.size() > 0:
+		overl_body = overl_bodies.front()
+	if (overl_body.has_method("init_dial")):
+		overl_body.init_dial()
+
+func _on_player_collision_area_area_exited(area):
+	pass
