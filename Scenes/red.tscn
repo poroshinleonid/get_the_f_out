@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://rntxee5ikkkn"]
+[gd_scene load_steps=25 format=3 uid="uid://rntxee5ikkkn"]
 
 [ext_resource type="Texture2D" uid="uid://bdtpm25ke7ncu" path="res://Resources/overworld_sprite_template_for_pokemon_games_by_cynthiacelestic-d8h0v36-1141318516.png" id="1_w2my3"]
 
@@ -188,6 +188,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6nvx"]
 size = Vector2(24, 40.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gia8l"]
+size = Vector2(33.25, 47.25)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(300, 85)
 
@@ -196,6 +199,23 @@ sprite_frames = SubResource("SpriteFrames_1ddq2")
 animation = &"idle_up"
 autoplay = "idle_up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PlayerCollisionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="PlayerCollisionBox" type="CollisionShape2D" parent="PlayerCollisionArea"]
 position = Vector2(0, 1.75)
 shape = SubResource("RectangleShape2D_q6nvx")
+
+[node name="PressToTalkLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -89.0
+offset_top = -52.0
+offset_right = 145.0
+offset_bottom = 48.0
+text = "PRESS X TO TALK (IDK)"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.375, 2.375)
+shape = SubResource("RectangleShape2D_gia8l")
+debug_color = Color(0.847059, 0, 0.901961, 0.419608)
