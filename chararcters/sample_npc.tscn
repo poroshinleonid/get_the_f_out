@@ -23,7 +23,7 @@ radius = 7.10118
 [node name="sample_npc" type="CharacterBody2D"]
 script = ExtResource("1_rthf8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D_npc" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 scale = Vector2(0.201852, 0.2)
 sprite_frames = SubResource("SpriteFrames_w5ngi")
